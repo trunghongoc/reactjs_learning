@@ -22,15 +22,13 @@ class DoiMau extends Component {
     }
 
     doiMau(color) {
-        console.log('color:', color)
-        // this.setState({ color: color })
         this.props.changeColorAction.actDoiMau({color: color})
     }
 
     render() {
         window.socket.on('change-color', (color) => {
             console.log('---receive color:', color)
-            this.props.changeColorAction.actDoiMau({color: color})
+            this.doiMau(color)
         })
 
         return (

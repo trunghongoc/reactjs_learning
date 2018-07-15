@@ -8,9 +8,7 @@ export const initialState = {
 
 const doiChu = handleActions({
   [ActionTypes.DOI_CHU]: (state: any, action: any): any => {
-    let _state = { ...state, text: action.payload.text }
-    console.log(_state)
-    return _state
+    return { ...state, text: action.payload.text }
   }
 }, initialState)
 

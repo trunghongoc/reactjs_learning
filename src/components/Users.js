@@ -26,10 +26,6 @@ class User extends Component {
         this.props.fetchD.actDeleteUser(userId)
     }
 
-    componentDidMount() {
-        console.log('users props:', this.props)
-    }
-
     getData() {
         this.props.fetchD.actFetchData({})
     }
