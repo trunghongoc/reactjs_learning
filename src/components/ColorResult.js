@@ -16,11 +16,14 @@ function mapDispatchToProps(dispatch: Function): Object {
 }
 
 class ColorResult extends Component {
+    componentWillReceiveProps(nextProps) {
+        window.socket.emit('change-color', nextProps.color)
+    }
+
     render() {
-        console.log('props:', this.props)
         return (
             <div className={ 'color-result ' + this.props.color }/>
-        );
+        )
     }
 }
   

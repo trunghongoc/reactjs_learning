@@ -28,6 +28,11 @@ class DoiMau extends Component {
     }
 
     render() {
+        window.socket.on('change-color', (color) => {
+            console.log('---receive color:', color)
+            this.props.changeColorAction.actDoiMau({color: color})
+        })
+
         return (
             <div>
                 <button onClick={ () => this.doiMau('green') }>Màu xanh</button>
