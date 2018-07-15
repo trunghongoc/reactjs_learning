@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import './Style.css'
 import Home from './pages/Home'
 import About from './pages/About'
+import Data from './pages/Data'
 
 // redux
 import { Provider } from 'react-redux'
@@ -23,10 +24,14 @@ class App extends Component {
               <li>
                 <Link to="/about">About</Link>
               </li>
+              <li>
+                <Link to="/data">Data</Link>
+              </li>
             </ul>
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/about" component={About} />
+              <Route path="/data" component={Data} />
             </Switch>
           </div>
         </Router>
