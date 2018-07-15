@@ -17,6 +17,15 @@ function mapDispatchToProps(dispatch: Function): Object {
 }
 
 class User extends Component {
+    constructor(props) {
+        super(props)
+        this.handleDeleteClick = this.handleDeleteClick.bind(this)
+    }
+
+    handleDeleteClick(userId) {
+        this.props.fetchD.actDeleteUser(userId)
+    }
+
     componentDidMount() {
         console.log('users props:', this.props)
     }
@@ -35,6 +44,9 @@ class User extends Component {
                     <td>{ user.name }</td>
                     <td>{ user.username }</td>
                     <td>{ user.email }</td>
+                    <td>
+                        <button onClick={ () => this.handleDeleteClick(user.id) }>xóa</button>
+                    </td>
                 </tr>
             )
         })
@@ -53,6 +65,7 @@ class User extends Component {
                         <th>name</th>
                         <th>user name</th>
                         <th>email</th>
+                        <th>action</th>
                     </tr>
                     </thead>
 

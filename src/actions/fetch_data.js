@@ -23,3 +23,11 @@ export function actFetchDataAlertFail(value) {
         payload: value
     }
 }
+
+export function actDeleteUser(value) {
+    console.log('fetch data 4')
+    return {
+        type: ActionTypes.DELETE_USER_BY_ID,
+        payload: value
+    }
+}
