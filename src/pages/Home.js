@@ -3,6 +3,7 @@ import DoiMau from './../components/DoiMau'
 import ColorResult from './../components/ColorResult'
 import InputText from './../components/InputText'
 import WrapTmpText from './../components/WrapTmpText'
+import ReactTrello from '../components/ReactTrello';
 
 class Home extends Component {
     render() {
@@ -13,9 +14,10 @@ class Home extends Component {
                 <ColorResult/>
                 <InputText/>
                 <WrapTmpText/>
+                <ReactTrello/>
             </div>
         )
     }
 }
-  
+
 export default Home
