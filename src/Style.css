@@ -16,3 +16,10 @@
     border-collapse: collapse;
     border: 1px solid #000;
 }
+.board-height {
+    height: 600px;
+}
+.board-height .cBXKgf {
+    height: 100%;
+    overflow-y: scroll;
+}

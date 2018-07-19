@@ -17,7 +17,7 @@ function mapDispatchToProps(dispatch: Function): Object {
 
 class ColorResult extends Component {
     componentWillReceiveProps(nextProps) {
-        window.socket.emit('change-color', nextProps.color)
+        // window.socket.emit('change-color', nextProps.color)
     }
 
     render() {

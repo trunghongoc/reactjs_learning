@@ -26,10 +26,10 @@ class DoiMau extends Component {
     }
 
     render() {
-        window.socket.on('change-color', (color) => {
-            console.log('---receive color:', color)
-            this.doiMau(color)
-        })
+        // window.socket.on('change-color', (color) => {
+        //     console.log('---receive color:', color)
+        //     this.doiMau(color)
+        // })
 
         return (
             <div>

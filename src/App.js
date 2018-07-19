@@ -5,6 +5,7 @@ import './Style.css'
 import Home from './pages/Home'
 import About from './pages/About'
 import Data from './pages/Data'
+import Trello from './pages/Trello'
 
 // redux
 import { Provider } from 'react-redux'
@@ -27,11 +28,15 @@ class App extends Component {
               <li>
                 <Link to="/data">Data</Link>
               </li>
+              <li>
+                <Link to="/trello">Trello</Link>
+              </li>
             </ul>
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/about" component={About} />
               <Route path="/data" component={Data} />
+              <Route path="/trello" component={Trello} />
             </Switch>
           </div>
         </Router>
